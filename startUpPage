@@ -1,0 +1,96 @@
+<! DOCTYPE html>
+<html>
+
+<head>
+<title>Why You Should Hire Me</title>
+<style>
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0;
+}
+
+canvas{
+   background-color:blue; 
+}
+
+</style>
+</head>
+
+<script type="text/javascript">
+function resize_canvas(){
+	canvas = document.getElementById("canvas");
+        
+	if (canvas.width  < window.innerWidth){
+		canvas.width  = window.innerWidth;
+         }
+
+	if (canvas.height < window.innerHeight){
+                canvas.height = window.innerHeight;
+      	}
+	
+	ctb= document.getElementById("ctb");
+	ctb.beginPath();
+	ctb.arc(400,canvas.height-10,200,0,2 * Math.PI);
+	ctb.strokeStyle= "#DAF7A6";
+	ctb.fillStyle= "#DAF7A6";
+	ctb.fill();
+	ctb.stroke();
+	ctb.font = "20px Arial";
+	ctb.textBaseline = "top";
+	ctb.fillStyle = "#4D9D0D";
+	ctb.fillText("Research Experience", 300, 700);
+	
+}
+</script>
+
+
+<body onresize="resize_canvas()">
+
+<h1></h1>
+
+<canvas id="myCanvas" width="800" height="800">Your browser doesn't support canvas</canvas>
+
+<script>
+var canvas=document.getElementById("myCanvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(10,20,200,0,2 * Math.PI);
+ctx.strokeStyle = "#69B3E7";
+ctx.fillStyle= "#69B3E7";
+ctx.fill();
+ctx.stroke();
+ctx.font = "20px Arial";
+ctx.textBaseline = "top";
+ctx.fillStyle = "#0C7BB2";
+ctx.fillText("A Java Code Sample", 10, 100);
+
+
+var cta= canvas.getContext("2d");
+cta.beginPath();
+cta.arc(800,350,200,0,2 * Math.PI);
+cta.fillStyle= "#FF5733";
+cta.strokeStyle = "#FF5733";
+cta.fill();
+cta.stroke();
+cta.font = "20px Arial";
+cta.textBaseline = "top";
+cta.fillStyle = "#B22A0C";
+cta.fillText("A Python Code Sample", 600, 350);
+
+
+
+var ctb= canvas.getContext("2d");
+
+
+
+
+
+</script>
+
+</body>
+</html>
