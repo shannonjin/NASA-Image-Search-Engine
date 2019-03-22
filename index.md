@@ -1,12 +1,11 @@
 ## Search for an image here:
-```html
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
   <input type="text" placeholder="Search..">
 </div>
-```
+
 
 You can use the [editor on GitHub](https://github.com/shannonjin/NASA-Image-Search-Engine/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
