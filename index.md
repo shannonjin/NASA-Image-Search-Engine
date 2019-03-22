@@ -1,4 +1,7 @@
-## Welcome to GitHub Pages
+## Search for an image here:
+```html
+<h1>Fuck</h1>
+```
 
 You can use the [editor on GitHub](https://github.com/shannonjin/NASA-Image-Search-Engine/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
