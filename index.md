@@ -2,11 +2,21 @@
 <html>
 <body>
 <div class="topnav">
-  <!--- <input type="text" placeholder="Search..">--->
+  <!--- <input type="text" placeholder="Search..">
   <form action="welcome_get.php" method="get">
    Image Search: <input type="text" name="name"><br>
   <input type="submit">
-</form> 
+</form>---> 
+  
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </dl>
+  <p><input type=submit value=Search>
+</form>
 </div>
 </body>
 </html>
