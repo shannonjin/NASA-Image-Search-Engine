@@ -2,16 +2,16 @@
  
 from app import app
 from db_setup import init_db, db_session
-from forms import MusicSearchForm
+from forms import SearchForm
 from flask import flash, render_template, request, redirect
-from models import Album
+#from models import Album
  
 init_db()
  
  
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    search = MusicSearchForm(request.form)
+    search = SearchForm(request.form)
     if request.method == 'POST':
         return search_results(search)
  
@@ -24,7 +24,7 @@ def search_results(search):
     search_string = search.data['search']
  
     if search.data['search'] == '':
-        qry = db_session.query(Album)
+        qry = db_session.query(Album) #FIX THIS WTF??????????????????????????????????
         results = qry.all()
  
     if not results:
