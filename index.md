@@ -7,6 +7,16 @@
    Image Search: <input type="text" name="name"><br>
   <input type="submit">
 </form>---> 
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
   
 {% from "_formhelpers.html" import render_field %}
 <form method=post>
