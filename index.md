@@ -1,10 +1,14 @@
 ## Search for an image here:
 <html>
+<body>
 <div class="topnav">
-   <!--- <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>--->
-  <input type="text" placeholder="Search..">
+  <!--- <input type="text" placeholder="Search..">--->
+  <form action="welcome_get.php" method="get">
+   Image Search: <input type="text" name="name"><br>
+  <input type="submit">
+</form> 
 </div>
+</body>
 </html>
 
 
