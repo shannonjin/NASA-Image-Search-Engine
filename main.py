@@ -18,7 +18,7 @@ def index():
     return render_template('index.html', form=search)
  
  
-@app.route('/results')
+@app.route('/results') #Are you sure you want a separate page for results???
 def search_results(search):
     results = []
     search_string = search.data['search']
