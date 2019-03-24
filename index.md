@@ -7,8 +7,7 @@
    Image Search: <input type="text" name="name"><br>
   <input type="submit">
 </form>---> 
-
-{% raw %}
+  
 {% with messages = get_flashed_messages() %}
   {% if messages %}
     <ul class=flashes>
@@ -20,7 +19,7 @@
 {% endwith %}
   
 {% from "_formhelpers.html" import render_field %}
-{% endraw %}
+
 <form method=post>
   <dl>
     {{ render_field(form.select) }}
