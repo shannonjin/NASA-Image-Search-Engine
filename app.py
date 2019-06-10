@@ -11,9 +11,10 @@ def home():
 def search():
 	print("ha")
 	if request.method == 'GET':
-		PARAMS= request.form['search']
+		PARAMS= request.args.getlist('search[]')
 		print('hi')
 		print(PARAMS)
+	return render_template('search.html')
 
 
 
