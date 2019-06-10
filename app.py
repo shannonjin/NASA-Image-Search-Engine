@@ -5,9 +5,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	PARAMS= request.form
-	print(PARAMS)
 	return render_template('index.html')
+
+@app.route('/search', methods=['GET'])
+def search():
+	print("ha")
+	if request.method == 'GET':
+		PARAMS= request.form['search']
+		print('hi')
+		print(PARAMS)
+
+
+
 
 
 
