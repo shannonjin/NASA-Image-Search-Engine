@@ -15,13 +15,20 @@ def search():
 		#print(len(PARAMS))
 		URL="https://images-api.nasa.gov/search"
 		r=requests.get(url=URL, params=PARAMS)
-		print(type(r))
-		print(r)
+		#print(type(r))
+		#print(r)
 		data=r.json()
-		print(type(data))
+		#print(type(data))
 		print(data)
+		print(type(data['collection']['items']))
+		#results=data['collection']
+		#print("Results\n")
+		#print(results)
+		#metadata=results['metadata']
+		#print(metadata)
+		
 
-	return render_template('search.html')
+	return render_template('search.html', data=data)
 
 
 

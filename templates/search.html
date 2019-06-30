@@ -19,11 +19,13 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     </nav>
-
+    <pre>  total hits: {{data['collection']['metadata']['total_hits']}}   version: {{data['collection']['version']}}</pre>
     <div class="list-group">
-
-
+         {% for result in data['collection']['items']%}
+           <img src="{{result['links'][0]['href']}}" class="list-group-item list-group-item-action flex-column align-items-start" style="width:150px;height:150px">
+        {% endfor %}
     </div>
+
 
 
     <!-- Optional JavaScript -->
