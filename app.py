@@ -26,7 +26,11 @@ def search():
 		#print(results)
 		#metadata=results['metadata']
 		#print(metadata)
-		
+
+		for result in data['collection']['items']:
+			print(result)
+			print(result['links'][0]['href'])
+
 
 	return render_template('search.html', data=data)
 

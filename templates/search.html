@@ -20,11 +20,15 @@
     </form>
     </nav>
     <pre>  total hits: {{data['collection']['metadata']['total_hits']}}   version: {{data['collection']['version']}}</pre>
+
+    {% if data['collection']['metadata']['total_hits']!='0'%}
     <div class="list-group">
          {% for result in data['collection']['items']%}
+          {% print(result) %}
            <img src="{{result['links'][0]['href']}}" class="list-group-item list-group-item-action flex-column align-items-start" style="width:300px;height:300px">
         {% endfor %}
     </div>
+    {% endif %}
 
 
 
