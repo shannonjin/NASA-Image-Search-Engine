@@ -5,7 +5,7 @@ A web front end for searching NASA's image set. NASA maintains an API for their 
 
 This project attempts to provide an easy and accesible user interface for accessing NASA's expansive image library, while preserving and providing useful metadata to users.
 
-This user interface was built with the flask webframe work and bootstrap. 
+This user interface was built with the flask webframe work and bootstrap. IMPORTANT: This project was coded to be compatible with NASA's 2020 API. Furture changes to the NASA API and dataset could deprecate this project.
 
 
 Launch page
