@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import sys
+import random
 
 app = Flask(__name__)
 
@@ -12,39 +13,24 @@ def home():
 def search():
 	if request.method == 'GET':
 		PARAMS= {'q': request.args.getlist('q')[0]}
-		#print(type(PARAMS))
-		#print(len(PARAMS))
+		
+		if PARAMS['q']=='':
+			n = random.randrange(1, 100, 1)
+			PARAMS['q']= str(n)
+			s = "No search term provided, random page returned"
+		else:
+			s = PARAMS['q']
+
 		URL="https://images-api.nasa.gov/search"
 		r=requests.get(url=URL, params=PARAMS)
-		#print(type(r))
-		#print(r)
+	
 		data=r.json()
 
-		#print(data.keys())
-		#print(data['collection'].keys())
-		print(data['collection']['items'][1]['data'][0])
-
-
-
-		for key,value in data.items():
-			print(key)
-		#	print(x)
-	
-		#results=data['collection']
-		#print("Results\n")
-		#print(results)
-		#metadata=results['metadata']
-		#print(metadata)
-
-#		for result in data['collection']['items']:
-#			print(result)
-#			print(result['links'][0]['href'])
-	return render_template('search.html', data=data)
+	return render_template('search.html', data=data, search_term = s)
 	
 
 
 
-#def search():
-    #render_template(index.html)-
-	#url="https://images-api.nasa.gov/search"
+
+
 
