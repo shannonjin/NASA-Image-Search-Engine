@@ -1,4 +1,7 @@
 # NASA-Image-Search-Engine
+
+---Update: currently experiencing errors with heroku server, in progress of fixing---
+
 Winning Capitol One Challenge Entry
 
 A web front end for searching NASA's image set. ***Try it out at https://shannon-nasa-image-search.herokuapp.com ! Search thousands of NASA curated images and videos!***
