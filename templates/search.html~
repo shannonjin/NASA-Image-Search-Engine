@@ -8,8 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-
     <title>NASA Image Search</title>
   </head>
 
@@ -21,37 +19,18 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     </nav>
-
-
-    {% if 'collection' in data %}
-
     <pre>  total hits: {{data['collection']['metadata']['total_hits']}}   version: {{data['collection']['version']}}</pre>
 
     {% if data['collection']['metadata']['total_hits']!='0'%}
-
     <div class="list-group">
          {% for result in data['collection']['items']%}
-         {% if 'links' in result %}
-         <div class="row">
-          <div class="column">
-            <img src="{{result['links'][0]['href']}}" class="list-group-item list-group-item-action flex-column align-items-start" style="width:300px;height:300px">
-          </div>
-          <div class="column">
-          <h1>{{result['data'][0]['title']}}</h1>
-          <p><strong>Date created: </strong>{{result['data'][0]['date_created']}}<strong> Media type: </strong>{{result['data'][0]['media_type']}}</p>
-          <p><strong>Center: </strong>{{result['data'][0]['center']}}<strong> NASA id: {{result['data'][0]['nasa_id']}}</strong></p>
-          <p><strong>Description: </strong> {{result['data'][0]['description']}}</p>
-
-          </div>
-        </div>
-         {% endif %}
+          {% print(result) %}
+           <img src="{{result['links'][0]['href']}}" class="list-group-item list-group-item-action flex-column align-items-start" style="width:300px;height:300px">
         {% endfor %}
     </div>
     {% endif %}
 
-    {% else %}
-    <pre>  total hits: 0, Showing all results</pre>
-     {% endif %}
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
