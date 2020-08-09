@@ -12,4 +12,4 @@ This user interface was built with the flask webframe work and bootstrap. **IMPO
 ![alt text](https://github.com/shannonjin/NASA-Image-Search-Engine/blob/master/Screen%20Shot%202020-08-09%20at%201.13.54%20AM.png)
 
 **Search results page**
-![alt text](https://github.com/shannonjin/NASA-Image-Search-Engine/blob/master/Screen%20Shot%202020-08-08%20at%2011.17.41%20PM.png)
+![alt text](https://github.com/shannonjin/NASA-Image-Search-Engine/blob/master/Screen%20Shot%202020-08-09%20at%201.14.29%20AM.png)
